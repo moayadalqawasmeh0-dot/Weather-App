@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: background 0.5s ease-in-out; /* عشان اللون يتغير بنعومة */
+}
+
+/* ألوان الخلفيات حسب حالة الطقس */
+.bg-default { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.bg-clear { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); } /* مشمس */
+.bg-clouds { background: linear-gradient(135deg, #bdc3c7 0%, #2c3e50 100%); } /* غائم */
+.bg-rain { background: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%); } /* مطر */
+.bg-snow { background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%); color: #333; } /* ثلج */
+.bg-thunder { background: linear-gradient(135deg, #141E30 0%, #243B55 100%); } /* عواصف */
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    text-align: center;
+    width: 350px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.search-box button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: #ff6b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #ff4757;
+}
+
+.weather-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.weather-info h2 {
+    font-size: 50px;
+    margin: 20px 0;
+}
+
+.weather-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
